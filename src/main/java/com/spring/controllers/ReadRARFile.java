@@ -30,6 +30,8 @@ public class ReadRARFile {
         }
     }
  
+	
+	
  
     public static void main(String[] args) {
         String zipFilePath = "F:\\\\test.ZIP";
