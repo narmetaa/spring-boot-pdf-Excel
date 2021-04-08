@@ -40,6 +40,16 @@ public class PdfControllers {
 		model.addAttribute("empdata", findAll);
 		return "welcome";
 	}
+	
+	
+	@GetMapping("/pdf")
+	public String pdfprint(Model model) {
+		System.out.println("user triggred welcome page");
+		Iterable<Employee> findAll = emprepo.findAll();
+
+		model.addAttribute("empdata", findAll);
+		return "pdfexport";
+	}
 
 	@GetMapping("//createPdf")
 	public void createPdf(HttpServletRequest request, HttpServletResponse response) {
